@@ -6,16 +6,43 @@
 </head>
 <body>
 
-       <nav class="navbar" data-th-fragment="navbar">
-            <div class="nav-wrapper">
-            <a href="#!" class="brand-logo center">Logo</a>
-            <ul class="left hide-on-med-and-down">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="badges.html">Components</a></li>
-            <li class="active"><a href="collapsible.html">JavaScript</a></li>
-           </ul>
-           </div>
-        </nav>
+
+       <nav class="navbar navbar-expand-lg bg-body-tertiary" data-th-fragment="navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img alt="Logo" src="https://fi.unju.edu.ar/images/LOGOS-FI-UNJU/logo-fi-unju-gran-formato-vertical-3000x2746.jpg" height="50" width="50"> FACULTAD DE INGENIERIA</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+        <a class="nav-link" href="#">Carreras</a>
+        <a class="nav-link" href="#">Noticias</a>
+        <a class="nav-link" href="#">Contacto</a>
+        <a class="nav-link" href="#">Acerca de</a>
+        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!--Aside-->
+<div data-th-fragment="columna" >
+<ul class="nav flex-column ">
+  <li class="nav-item">
+    <a class="nav-link"  href="#">Biblioteca</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Calendario Académico</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  
+</ul>
+</div>
+      
     <div data-th-fragment="paginacion">   
         <ul class="pagination">
          <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
