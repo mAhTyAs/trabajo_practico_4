@@ -18,18 +18,25 @@
           </header>
           <div class="row">
           <main class="col-9">
-                <h1>Hola Mundo</h1>
+          <br>
+                <h3>Noticias Recientes</h3>
+                <br>
+                <section data-th-replace="~{fragments/header::section}">
+                           
+                </section>
                
           </main>
           
           <aside class="col-3" >
-          <div data-th-replace="~{fragments/header::columna}">></div>
+          <h5>Enlaces de Intres</h3>
+          <div data-th-replace="~{fragments/header::columna}"></div>
          
           </aside>
           </div>
+          
           <footer>
                   <h1>Footer</h1>
-                   <div data-th-replace="~{fragments/header::paginacion}">
+                   <div data-th-replace="~{fragments/header::footer}">
                       
                  </div>
           </footer>   
