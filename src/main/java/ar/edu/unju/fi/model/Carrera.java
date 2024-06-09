@@ -36,7 +36,10 @@ public class Carrera {
 		this.cantidadAnos = cantidadAnos;
 		this.estado = estado;
 	}
+	public Carrera() {
+		// TODO Auto-generated constructor stub
+	}
 	
-	
+
 
 }

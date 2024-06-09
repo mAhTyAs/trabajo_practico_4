@@ -50,6 +50,17 @@ public class Materia {
 	public void setCarrera(Carrera carrera) {
 		this.carrera = carrera;
 	}
+	public Materia(String codigo, String nombre, String curso, int cantidadHoras, String modalidad, Docente docente,
+			Carrera carrera) {
+		super();
+		this.codigo = codigo;
+		this.nombre = nombre;
+		this.curso = curso;
+		this.cantidadHoras = cantidadHoras;
+		this.modalidad = modalidad;
+		this.docente = docente;
+		this.carrera = carrera;
+	}
 	
 	
 

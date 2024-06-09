@@ -36,6 +36,17 @@ public class Docente {
 	public void setTelefono(int telefono) {
 		this.telefono = telefono;
 	}
+	public Docente(String legajo, String nombre, String apellido, String email, int telefono) {
+		super();
+		this.legajo = legajo;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.email = email;
+		this.telefono = telefono;
+	}
+	public Docente() {
+		// TODO Auto-generated constructor stub
+	}
 	
 	
 
