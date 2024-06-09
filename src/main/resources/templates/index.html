@@ -28,19 +28,31 @@
           </main>
           
           <aside class="col-3" >
-          <h5>Enlaces de Intres</h3>
+          <h5>Enlaces de Intres</h5>
           <div data-th-replace="~{fragments/header::columna}"></div>
          
           </aside>
           </div>
-          
+          <br>
           <footer>
-                  <h1>Footer</h1>
-                   <div data-th-replace="~{fragments/header::footer}">
-                      
-                 </div>
-          </footer>   
+                 <div class="row">
+                      <div class="col-3">
+                                   <h2>Redes Sociales</h2>
+                                   <div data-th-replace="~{fragments/header::redes}" >     
+                                   </div>
+                      </div>     
+                                  <div class="col-3">
+                                   <h2>Contacto</h2>
+                                   <div data-th-replace="~{fragments/header::contact}" >     
+                                   </div>
+                                   </div>  
+                 </div>          
+           </footer>  
+   
     </div>
+    
+ 
+    
           <!--JavaScript at end of body for optimized loading-->
           <script data-th-src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
     </body>
