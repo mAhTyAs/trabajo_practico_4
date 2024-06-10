@@ -16,9 +16,9 @@ public static List<Alumno> alumnos = new ArrayList<Alumno>();
 	}
 	
 	//Buscar Alumnos
-	public static Alumno buscarAlumno(String dni) {
+	public static Alumno buscarAlumno(String lu) {
 		for (Alumno a : alumnos) {
-			if (a.getDni().equals(dni)) {
+			if (a.getLu().equals(lu)) {
 				return a;
 			}		
 		}
@@ -34,7 +34,7 @@ public static List<Alumno> alumnos = new ArrayList<Alumno>();
 	public static void modificarAlumno(Alumno alumnoModif) {
 		for(int i=0;i<alumnos.size();i++) {
 			Alumno alumno = alumnos.get(i);
-			if(alumno.getDni().equals(alumnoModif.getDni())) {
+			if(alumno.getLu().equals(alumnoModif.getLu())) {
 				alumnos.set(i, alumnoModif);
 				break;
 			}
@@ -42,8 +42,8 @@ public static List<Alumno> alumnos = new ArrayList<Alumno>();
 	}
 	
 	//Eliminar Alumno
-	public static void eliminarAlumno(String dni) {
-		alumnos.removeIf(alumno -> alumno.getDni().equals(dni));
+	public static void eliminarAlumno(String lu) {
+		alumnos.removeIf(alumno -> alumno.getLu().equals(lu));
 	}
 
 }

@@ -2,6 +2,8 @@ package ar.edu.unju.fi.model;
 
 import java.time.LocalDate;
 
+import org.springframework.stereotype.Component;
+@Component
 public class Alumno {
 	private String dni;
 	private String nombre;
@@ -11,6 +13,7 @@ public class Alumno {
 	private LocalDate fechaNac;
 	private String domicilio;
 	private String lu;
+	
 	public String getDni() {
 		return dni;
 	}
@@ -70,6 +73,10 @@ public class Alumno {
 		this.fechaNac = fechaNac;
 		this.domicilio = domicilio;
 		this.lu = lu;
+	}
+	public Alumno() {
+		// TODO Auto-generated constructor stub
+		
 	}
 	
 	
