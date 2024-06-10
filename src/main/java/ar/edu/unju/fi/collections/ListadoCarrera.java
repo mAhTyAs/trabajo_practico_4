@@ -2,6 +2,7 @@ package ar.edu.unju.fi.collections;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import ar.edu.unju.fi.model.Carrera;
 
@@ -12,7 +13,10 @@ public class ListadoCarrera {
 	
 	//Listar Carreras
 	public static List<Carrera> listarCarreras(){
-		return carreras;
+		//listar carreras en estado true
+	return carreras.stream()
+                .filter(Carrera::isEstado) 
+                .collect(Collectors.toList());
 	}
 	
 	//Buscar Carrera
@@ -27,11 +31,14 @@ public class ListadoCarrera {
 	
 	//Agregar Carrera
 	public static void agregarCarrera(Carrera c) {
+		//agregar estado
+		c.setEstado(true);
 		carreras.add(c);
 	}
 	
 	//Modificar Carrera
 	public static void modificarCarrera(Carrera carreraModif) {
+		carreraModif.setEstado(true);
 		for(int i=0;i<carreras.size();i++) {
 			Carrera carrera = carreras.get(i);
 			if(carrera.getCodigo().equals(carreraModif.getCodigo())) {
@@ -43,7 +50,17 @@ public class ListadoCarrera {
 	
 	//Eliminar Carrera
 	public static void eliminarCarrera(String codigo) {
-		carreras.removeIf(carrera -> carrera.getCodigo().equals(codigo));
+		 //borrado físico
+	    //carreras.removeIf(carrera -> carrera.getCodigo().equals(codigo));
+		  
+		  //borrado lógico
+		  for (int i = 0; i < carreras.size(); i++) {
+		      Carrera carrera = carreras.get(i);
+		      if (carrera.getCodigo().equals(codigo)) {
+		        carrera.setEstado(false);
+		        break;
+		      }
+		    }
 	}
 
 }
