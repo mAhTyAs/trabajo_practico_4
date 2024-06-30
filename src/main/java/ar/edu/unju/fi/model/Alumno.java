@@ -13,6 +13,7 @@ public class Alumno {
 	private LocalDate fechaNac;
 	private String domicilio;
 	private String lu;
+	private boolean estado;
 	
 	public String getDni() {
 		return dni;
@@ -62,8 +63,14 @@ public class Alumno {
 	public void setLu(String lu) {
 		this.lu = lu;
 	}
+	public boolean isEstado() {
+		return estado;
+	}
+	public void setEstado(boolean estado) {
+		this.estado = estado;
+	}
 	public Alumno(String dni, String nombre, String apellido, String email, int telefono, LocalDate fechaNac,
-			String domicilio, String lu) {
+			String domicilio, String lu, boolean estado) {
 		super();
 		this.dni = dni;
 		this.nombre = nombre;
@@ -73,6 +80,7 @@ public class Alumno {
 		this.fechaNac = fechaNac;
 		this.domicilio = domicilio;
 		this.lu = lu;
+		this.estado = estado;
 	}
 	public Alumno() {
 		// TODO Auto-generated constructor stub

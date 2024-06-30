@@ -10,11 +10,11 @@
 <body>
 	<div class="container">
 		<h1>FORMULARIO ALUMNO</h1>
-		<form data-th-object="${nuevoAlumno}" data-th-action="@{/modificarAlumno}"
+		<form data-th-object="${nuevoAlumno}" data-th-action="${band}?@{/modificarAlumno}:@{/guardarAlumno}"
 				method="post">
 			<div class="col-md-4">
 				<label for="dni" class="form-label">DNI</label> <input
-					type="text" class="form-control" id="dni" data-th-field="*{dni}">
+					type="text" class="form-control" id="dni" data-th-field="*{dni}" >
 			</div>
 			<div class="col-md-4">
 				<label for="nombre" class="form-label">Nombre del Alumno</label> <input
@@ -54,7 +54,7 @@
 				
 				<label for="lu" class="form-label">LU del Alumno</label> 
 				<input
-					type="text" class="form-control" id="lu" data-th-field="*{lu}">
+					type="text" class="form-control" id="lu" data-th-field="*{lu}" data-th-readonly=${band}>
 			</div>
 
 			<button type="submit" class="btn btn-primary" data-th-action="@{/guardarAlumno}">Guardar</button>

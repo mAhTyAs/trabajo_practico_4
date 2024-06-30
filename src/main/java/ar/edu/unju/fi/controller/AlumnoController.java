@@ -34,11 +34,12 @@ public class AlumnoController {
 		
 		//mostrar listado
 	    ModelAndView formA = new ModelAndView("listaAlumnos");
-		formA.addObject("listadoMaterias",ListadoAlumnos.listarAlumnos());
+	
+		formA.addObject("listadoAlumnos",ListadoAlumnos.listarAlumnos());
 		return formA;
 	}
 	
-	@GetMapping("/borrarAlumno/{codigo}")
+	@GetMapping("/borrarAlumno/{lu}")
 	public ModelAndView deleteAlumno(@PathVariable(name="lu") String lu) {
 		//borrar
 		ListadoAlumnos.eliminarAlumno(lu);
@@ -50,15 +51,15 @@ public class AlumnoController {
 		return formA;		
 		}
 	
-	@GetMapping("/modificarAlumno/{codigo}")
+	@GetMapping("/modificarAlumno/{lu}")
 	public ModelAndView editAlumno(@PathVariable(name="lu") String lu) {
 		//buscar
 		Alumno modificarAlumno = ListadoAlumnos.buscarAlumno(lu);
 		
 		//mostrar el nuevo formulario
 		ModelAndView formA = new ModelAndView("formAlumno");
-		formA.addObject("nuevaAlumno", modificarAlumno);	
-		
+		formA.addObject("nuevoAlumno", modificarAlumno);	
+		formA.addObject("band", true);
 		return formA;		
 		}
 	
