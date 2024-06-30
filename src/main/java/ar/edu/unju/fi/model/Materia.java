@@ -11,6 +11,7 @@ public class Materia {
 	private String modalidad;
 	private Docente docente;
 	private Carrera carrera;
+	private boolean estado;
 	public String getCodigo() {
 		return codigo;
 	}
@@ -52,6 +53,12 @@ public class Materia {
 	}
 	public void setCarrera(Carrera carrera) {
 		this.carrera = carrera;
+	}
+	public boolean isEstado() {
+		return estado;
+	}
+	public void setEstado(boolean estado) {
+		this.estado = estado;
 	}
 	public Materia(String codigo, String nombre, String curso, int cantidadHoras, String modalidad, Docente docente,
 			Carrera carrera) {
