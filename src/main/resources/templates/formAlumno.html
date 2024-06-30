@@ -9,57 +9,77 @@
 </head>
 <body>
 	<div class="container">
+		<header>
+			<div data-th-replace="~{layouts/header::navbar}"></div>
+		</header>
 		<h1>FORMULARIO ALUMNO</h1>
-		<form data-th-object="${nuevoAlumno}" data-th-action="${band}?@{/modificarAlumno}:@{/guardarAlumno}"
-				method="post">
+		<form data-th-object="${nuevoAlumno}"
+			data-th-action="${band}?@{/modificarAlumno}:@{/guardarAlumno}"
+			method="post">
 			<div class="col-md-4">
-				<label for="dni" class="form-label">DNI</label> <input
-					type="text" class="form-control" id="dni" data-th-field="*{dni}" >
+				<label for="dni" class="form-label">DNI</label> <input type="text"
+					class="form-control" id="dni" data-th-field="*{dni}">
 			</div>
 			<div class="col-md-4">
 				<label for="nombre" class="form-label">Nombre del Alumno</label> <input
-					type="text" class="form-control" id="nombre" data-th-field="*{nombre}">
+					type="text" class="form-control" id="nombre"
+					data-th-field="*{nombre}">
 			</div>
 			<div class="col-md-4">
-				
-				<label for="apellido" class="form-label">Apellido del Alumno</label> 
-				<input
-					type="text" class="form-control" id="apellido" data-th-field="*{apellido}">
+
+				<label for="apellido" class="form-label">Apellido del Alumno</label>
+				<input type="text" class="form-control" id="apellido"
+					data-th-field="*{apellido}">
 			</div>
 			<div class="col-md-4">
-				
-				<label for="email" class="form-label">Email del Alumno</label> 
-				<input
-					type="email" class="form-control" id="email" data-th-field="*{email}">
+
+				<label for="email" class="form-label">Email del Alumno</label> <input
+					type="email" class="form-control" id="email"
+					data-th-field="*{email}">
 			</div>
 			<div class="col-md-4">
-				
-				<label for="telef" class="form-label">Telefono del Alumno</label> 
-				<input
-					type="tel" class="form-control" id="telef" data-th-field="*{telefono}">
+
+				<label for="telef" class="form-label">Telefono del Alumno</label> <input
+					type="tel" class="form-control" id="telef"
+					data-th-field="*{telefono}">
 			</div>
 			<div class="col-md-4">
-				
-				<label for="fecha" class="form-label">Fecha de Nacimiento del Alumno</label> 
-				<input
-					type="date" class="form-control" id="fecha" data-th-field="*{fechaNac}">
+
+				<label for="fecha" class="form-label">Fecha de Nacimiento
+					del Alumno</label> <input type="date" class="form-control" id="fecha"
+					data-th-field="*{fechaNac}">
 			</div>
 			<div class="col-md-4">
-				
-				<label for="domicilo" class="form-label">Domicilio del Alumno</label> 
-				<input
-					type="text" class="form-control" id="domicilio" data-th-field="*{domicilio}">
+
+				<label for="domicilo" class="form-label">Domicilio del
+					Alumno</label> <input type="text" class="form-control" id="domicilio"
+					data-th-field="*{domicilio}">
 			</div>
 			<div class="col-md-4">
-				
-				<label for="lu" class="form-label">LU del Alumno</label> 
-				<input
-					type="text" class="form-control" id="lu" data-th-field="*{lu}" data-th-readonly=${band}>
+
+				<label for="lu" class="form-label">LU del Alumno</label> <input
+					type="text" class="form-control" id="lu" data-th-field="*{lu}"
+					data-th-readonly=${band}>
 			</div>
 
-			<button type="submit" class="btn btn-primary" data-th-action="@{/guardarAlumno}">Guardar</button>
+			<button type="submit" class="btn btn-primary"
+				data-th-action="@{/guardarAlumno}">Guardar</button>
 		</form>
+
+		<footer>
+			<div class="row">
+				<div class="col-3">
+					<h2>Redes Sociales</h2>
+					<div data-th-replace="~{layouts/footer::redes}"></div>
+				</div>
+				<div class="col-3">
+					<h2>Contacto</h2>
+					<div data-th-replace="~{layouts/footer::contact}"></div>
+				</div>
+			</div>
+		</footer>
 	</div>
+
 	<script
 		data-th-src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
 </body>
